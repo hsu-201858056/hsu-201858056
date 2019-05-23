@@ -1,0 +1,599 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>スタジオジブリ</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="mainTotoro.png" >
+			<ul data-role="listview" data-inset="true">
+				<li><a href="intro.html" title="Introduction to Writers" data-rel="dialog">작가소개(作家の紹介)</a></li>
+				<li><a href="content.html" title="Work activities">작품활동(作家活動)</a></li>
+				<li><a href="#movie0" title="Preview" data-rel="dialog">메인예고편(メイン予告編)</a></li>
+				<li><a href="#wizard3-1" title="Ost" data-rel="dialog" data-transition="slide">작품OST(作品のOST)</a></li>
+				<li><a href="#gallery" title="Gallery">갤러리(ギャラリー)</a></li>
+				<li><a href="Resume1.html" title="Resume">이력서(履歴書)</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>최은비(チェ·ウンビ)</h1>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1>바람계곡의 나우시카<br>(風の谷のナウシカ)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">오무와의 교류_王蟲との交流</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="1984_風の谷のナウシカ～王蟲との交流2.mp3" type="audio/mp3">
+			</audio>
+			<img src="1984_2.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+			<a href="#wizard3-2" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="wizard3-2">
+		<div data-role="header">
+			<h1>천공의 성 라퓨타<br>(天空の城ラピュタ)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">너를 태우고_君をのせて</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="1986_天空の城ラピュタ.mp3" type="audio/mp3">
+			</audio>
+			<img src="1986_1.gif" alt="" width="100%">			
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-1"  data-direction="reverse">이전</a>
+			<a href="#wizard3-3" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-3">
+		<div data-role="header">
+			<h1>이웃집 토토로<br>(となりのトトロ)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">바람이 지나가는 길 _風のとおり道</div><br>
+			<audio controls width="100%" preload="metadata">
+				<source src="1988_となりのトトロ.mp3" type="audio/mp3">
+			</audio>			
+			<img src="1988_2.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-2"  data-direction="reverse">이전</a>
+			<a href="#wizard3-4" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-4">
+		<div data-role="header">
+			<h1>마녀 배달부 키키<br>(魔女の宅急便)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">바다가 보이는 마을_海の見える街</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="1989_魔女の宅急便.mp3" type="audio/mp3">
+			</audio>			
+			<img src="1989_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-3"  data-direction="reverse">이전</a>
+			<a href="#wizard3-5" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-5">
+		<div data-role="header">
+			<h1>추억은 방울방울<br>(おもひでぽろぽろ)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">おもひでぽろぽろ_Only Yesterday</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="1991_おもひでぽろぽろ.mp3" type="audio/mp3">
+			</audio>			
+			<img src="1991_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-4"  data-direction="reverse">이전</a>
+			<a href="#wizard3-6" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-6">
+		<div data-role="header">
+			<h1>붉은돼지<br>(紅の豚)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">가끔은 옛날이야기를_時には昔の話を</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="1992_時には昔の話を.mp3" type="audio/mp3">
+			</audio>			
+			<img src="1992_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-5"  data-direction="reverse">이전</a>
+			<a href="#wizard3-7" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-7">
+		<div data-role="header">
+			<h1>폼포코 너구리 대작전<br>(平成狸合戦ポンポコ)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">언제나 누군가가_いつでも誰かが</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="1994_いつでも誰かが.mp3" type="audio/mp3">
+			</audio>			
+			<img src="1994_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-6"  data-direction="reverse">이전</a>
+			<a href="#wizard3-8" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-8">
+		<div data-role="header">
+			<h1>귀를 기울이면<br>(耳をすませば)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">컨트리 로드_カントリーロード</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="1995_耳をすませば.mp3" type="audio/mp3">
+			</audio>			
+			<img src="1995_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-7"  data-direction="reverse">이전</a>
+			<a href="#wizard3-9" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-9">
+		<div data-role="header">
+			<h1>모노노케 히메<br>(もののけ姫)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">もののけ姫歌_Theme of Princess Mononoke</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="1997_もののけ姫.mp3" type="audio/mp3">
+			</audio>			
+			<img src="1997_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-8"  data-direction="reverse">이전</a>
+			<a href="#wizard3-10" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-10">
+		<div data-role="header">
+			<h1>센과 치히로의 행방불명<br>(千と千尋の神隠し)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">언제나 몇번이라도_いつも何度でも</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="2001_千と千尋の神隠し.mp3" type="audio/mp3">
+			</audio>			
+			<img src="2001_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-9"  data-direction="reverse">이전</a>
+			<a href="#wizard3-11" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-11">
+		<div data-role="header">
+			<h1>고양이의 보은<br>(猫の恩返し)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">바람이 되어_風になる</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="2002_猫の恩返し.mp3" type="audio/mp3">
+			</audio>			
+			<img src="2002_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-10"  data-direction="reverse">이전</a>
+			<a href="#wizard3-12" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-12">
+		<div data-role="header">
+			<h1>하울의 움직이는 성<br>(ハウルの動く城)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">인생의 회전목마_人生のメリ-ゴ-ランド</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="2004_ハウルの動く城.mp3" type="audio/mp3">
+			</audio>			
+			<img src="2004_2.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-11"  data-direction="reverse">이전</a>
+			<a href="#wizard3-13" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-13">
+		<div data-role="header">
+			<h1>벼랑 위의 포뇨<br>(崖の上のポニョ)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">벼랑 위의 포뇨_崖の上のポニョ</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="2008_崖の上のポニョ.mp3" type="audio/mp3">
+			</audio>			
+			<img src="2008_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-12"  data-direction="reverse">이전</a>
+			<a href="#wizard3-14" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-14">
+		<div data-role="header">
+			<h1>마루 밑 아리에티<br>借りぐらしのアリエッティ</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">借りぐらしのアリエッティ_Arriety's Song</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="2010_借りぐらしのアリエッティ.mp3" type="audio/mp3">
+			</audio>			
+			<img src="2010_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-13"  data-direction="reverse">이전</a>
+			<a href="#wizard3-15" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-15">
+		<div data-role="header">
+			<h1>코쿠리코 언덕에서<br>(コクリコの坂から)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">이별의 여름_さよならの夏</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="2011_コクリコの坂から.mp3" type="audio/mp3">
+			</audio>			
+			<img src="2011_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-14"  data-direction="reverse">이전</a>
+			<a href="#wizard3-16" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-16">
+		<div data-role="header">
+			<h1>바람이 분다<br>(風立ちぬ)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">비행기 구름_ひこうき雲</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="2013_風立ちぬ.mp3" type="audio/mp3">
+			</audio>			
+			<img src="2013_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-15"  data-direction="reverse">이전</a>
+			<a href="#wizard3-17" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+	<div data-role="page" id="wizard3-17">
+		<div data-role="header">
+			<h1>추억의 마니<br>(思い出のマーニー)</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">思い出のマーニー_Fine On The Outside</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="2014_思い出のマーニー.mp3" type="audio/mp3">
+			</audio>			
+			<img src="2014_1.gif" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-16"  data-direction="reverse">이전</a>
+			<a href="#home">처음</a>
+		</div>
+	</div>
+	
+	
+	
+	<div data-role="page" id="movie0" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>미리 말씀 드립니다</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e"><font size="20px" color="skyblue">본</font> 예고편은 1984년부터 2014년까지 개봉된<br><font color="skyblue">시간</font> 순서대로 정리했습니다.<br>너무 오래된 영화는 <font color="skyblue">화질</font>이 깨지거나 <font color="skyblue">글씨</font>가 깨질 수 있습니다.
+				 또한, 한국 영화관에 상영된 영화들은 예고편이 존재하지만 그러지못한 영화들은 예고편이 없어 <font color="skyblue">일본 예고편</font>을 가져온 점도 미리 말씀드리며 양해 부탁드립니다.</div><br/>
+			<li align="center"></li><br/>
+			
+			<div data-role="footer">
+			<a href="#home" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie1" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie1" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">1984_바람계곡의 나우시카(風の谷のナウシカ)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/8nlefqJLsU4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+
+			<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+			<a href="#movie2" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="movie2" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">1986_천공의 성 라퓨타(天空の城ラピュタ)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/8ykEy-yPBFc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie1" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie3" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie3" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">1988_이웃집 토토로(となりのトトロ)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/zfUEkq-mxZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie2" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie4" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie4" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">1989_마녀 배달부 키키(魔女の宅急便)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/x4GCIAn63tQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie3" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie5" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie5" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">1991_추억은 방울방울(おもひでぽろぽろ)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/2vjVxI__IFk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie4" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie6" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie6" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">1992_붉은돼지(紅の豚)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/zkvrBImFjLE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie5" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie7" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie7" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">1994_폼포코 너구리 대작전(平成狸合戦ポンポコ)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/8PSB2-qCxxE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie6" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie8" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie8" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">1995_귀를 기울이면(耳をすませば)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/hu653_bgVNo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie7" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie9" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie9" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">1997_모노노케 히메(もののけ姫)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/FIBruuhB3rQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie8" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie10" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie10" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">2001_센과 치히로의 행방불명(千と千尋の神隠し)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/lwrG3HQXTFw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie9" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie11" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie11" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">2002_고양이의 보은(猫の恩返し)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/Gp-H_YOcYTM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie10" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie12" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie12" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">2004_하울의 움직이는 성(ハウルの動く城)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/dfXaJ0XUmCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie11" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie13" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie13" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">2008_벼랑 위의 포뇨(崖の上のポニョ)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/q_DRoDM0BW0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie12" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie14" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie14" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">2010_마루 밑 아리에티(借りぐらしのアリエッティ)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/BZqVL8ryhJQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie13" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie15" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie15" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">2011_코쿠리코 언덕에서(コクリコの坂から)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/caAlyzKQEWQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie14" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie16" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie16" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">2013_바람이 분다(風立ちぬ)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/7-Q8ELkE73w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie15" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#movie17" data-rel="dialog" data-transition="slide">다음</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movie17" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>메인예고편</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">2014_추억의 마니(思い出のマーニー)</div><br/>
+			<li align="center"><iframe width="420" height="320" src="https://www.youtube.com/embed/FM8H7XFK0CM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			
+			<div data-role="footer">
+			<a href="#movie16" data-rel="dialog" data-transition="slide">이전</a>
+			<a href="#home">처음</a>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>갤러리(ギャラリー)</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+				<li><a href="sen1.jpg" rel="external"><img src="sen1.jpg" /></a></li>	
+				<li><a href="sen2.jpg" rel="external"><img src="sen2.jpg" /></a></li>	
+				<li><a href="new2.jpeg" rel="external"><img src="new2.jpeg" /></a></li>	
+				<li><a href="new1.jpg" rel="external"><img src="new1.jpg" /></a></li>	
+				<li><a href="kiki1.jpg" rel="external"><img src="kiki1.jpg" /></a></li>	
+				<li><a href="kiki2.jpg" rel="external"><img src="kiki2.jpg" /></a></li>	
+				<li><a href="kiki3.jpg" rel="external"><img src="kiki3.jpg" /></a></li>	
+				<li><a href="hawul1.png" rel="external"><img src="hawul1.png" /></a></li>	
+				<li><a href="hawul2.jpeg" rel="external"><img src="hawul2.jpeg" /></a></li>	 
+				<li><a href="hawul3.jpeg" rel="external"><img src="hawul3.jpeg" /></a></li>    
+				<li><a href="popo2.jpeg" rel="external"><img src="popo2.jpeg" /></a></li>   
+				<li><a href="popo1.jpeg" rel="external"><img src="popo1.jpeg" /></a></li>
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>최은비(チェ·ウンビ)</h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
